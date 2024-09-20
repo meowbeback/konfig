@@ -1,0 +1,10 @@
+#!/bin/bash
+cat "$1" | head -n 1 -q | (read TEXT;
+if [[ ( ( "$TEXT" == "/*"* || "$TEXT" == "//"* )  && ( "$1" == *".cpp" || "$1" == *".js" ) ) || ( "$TEXT" == "#"* && "$>then
+        echo "Comment found";
+else
+        echo "Comment not found";
+fi
+)
+touch myfile.cpp
+./comment myfile.cpp
