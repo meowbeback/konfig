@@ -1,0 +1,8 @@
+nano banner.sh
+#!/bin/bash
+for file in `find $1 -name '*.txt*'`; do
+        if [ ! -s $file ]; then
+                echo $file
+        fi
+done
+./banner.sh
