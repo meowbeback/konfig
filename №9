@@ -1,0 +1,7 @@
+touch orig.txt
+touch mod.txt
+nano replace.sh
+#!/bin/bash
+cp $1 $2
+sed -i  's/    /\t/g' $2
+./replace.sh orig.txt mod.txt
